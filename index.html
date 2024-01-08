@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        body {
+            background-color: #212122;
+        }
+
+        .helvetica {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        .button {
+            border: none;
+            background-color: whitesmoke;
+            color: rgba(42, 40, 40, 0.8);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+        #profile-image {
+            border-radius: 15px;
+            width: auto;
+            height: 80%;
+        }
+
+        #about-section {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <div style="margin-top: 30px; margin-bottom: 30px">
+        <p class="helvetica" id="header"
+            style="text-align: center; font-size: 50px; font-weight: bold; color: whitesmoke;">
+            <script>
+                anime({
+                    targets: '#header',
+                    translateY: [-200, 0],
+                    easing: 'easeInOutExpo'
+                });
+            </script>
+            About Me
+        </p>
+    </div>
+
+    <div class="container" id="about-section">
+        <div class="row">
+            <div class="col-lg-6">
+                <img src="image/me.jpg" alt="About Me Image" id="profile-image">
+            </div>
+            <div class="col-lg-6">
+                <div id="headers">
+                    <script>
+                        anime({
+                            targets: '#headers',
+                            translateX: [-400, 0],
+                            delay: anime.stagger(100, { start: 400 }),
+                        });
+                    </script>
+
+                    <p class="helvetica"
+                        style="font-size: 40px; font-weight: bold; margin-top: -15px; color: whitesmoke;">
+                        Hi, I'm Joy
+                    </p>
+                    <p class="helvetica" id="headers" style="font-size: 25px; font-weight: bold; color: whitesmoke;">
+                        Age:
+                        <b class="helvetica" id="age" style="font-size: 25px; font-weight: bold; color: whitesmoke;">
+                            <script>
+                                anime({
+                                    targets: '#age',
+                                    innerHTML: [0, 18],
+                                    easing: 'easeInOutSine',
+                                    round: 1,
+                                    duration: 2000
+                                });
+                            </script><br>
+                        </b>
+                    <p>
+                    <form action="https://www.instagram.com/jjxjtotheworld/" target="_blank">
+                        <input class="button" type="submit" value="@jjxjtotheworld" />
+                    </form>
+                    </p>
+                </div>
+
+                <p class="helvetica" id="description" style="font-size: 18px; margin-top: 20px;color: whitesmoke;">
+                    <script>
+                        anime({
+                            targets: '#description',
+                            translateX: [-490, 0],
+                            translateY: [-100, 0],
+                            delay: anime.stagger(100, { start: 400 }),
+                            scale: [0.8, 1]
+                        });
+                    </script>
+
+                    A 2nd year <b>student</b> at <b>Republic Polytechnic</b>, studying <b>Digital Design and
+                    Development</b>.<br><br>
+                    
+                    2nd year student pursuing a Diploma in Digital Design & Development. In
+                    school, I am often active in my CCA (SOI Club), participating in the various service learning and
+                    workshops held. On top of that, I also serve in the Girls in Tech @ Cross Polytechnic Singapore
+                    group as one of the EXCOs for publicity.
+
+                    During my free time, I enjoy reading books on politics and watching Hong Kong dramas.
+
+                    Outside of school, I serve with the Girls' Brigade as a Voluntary Adult Leader (aka officer) and in
+                    my church youth ministry as part of the media crew.<br><br><br><br>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
